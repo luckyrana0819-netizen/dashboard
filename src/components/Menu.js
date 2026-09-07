@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-
 import { Link } from "react-router-dom";
 
 const Menu = () => {
@@ -10,16 +9,26 @@ const Menu = () => {
     setSelectedMenu(index);
   };
 
-  const handleProfileClick = (index) => {
+  const handleProfileClick = () => {
     setIsProfileDropdownOpen(!isProfileDropdownOpen);
   };
+
+    const handleLogout = () => {
+     localStorage.clear();
+      window.location.replace("http://localhost:3000/login");
+    };
 
   const menuClass = "menu";
   const activeMenuClass = "menu selected";
 
   return (
     <div className="menu-container">
-      <img src="logo.png" style={{ width: "50px" }} />
+      <img
+        src="/logo (1).png"
+        style={{ width: "50px" }}
+        alt="Logo"
+      />
+
       <div className="menus">
         <ul>
           <li>
@@ -33,6 +42,7 @@ const Menu = () => {
               </p>
             </Link>
           </li>
+
           <li>
             <Link
               style={{ textDecoration: "none" }}
@@ -44,6 +54,7 @@ const Menu = () => {
               </p>
             </Link>
           </li>
+
           <li>
             <Link
               style={{ textDecoration: "none" }}
@@ -55,6 +66,7 @@ const Menu = () => {
               </p>
             </Link>
           </li>
+
           <li>
             <Link
               style={{ textDecoration: "none" }}
@@ -66,10 +78,11 @@ const Menu = () => {
               </p>
             </Link>
           </li>
+
           <li>
             <Link
               style={{ textDecoration: "none" }}
-              to="funds"
+              to="/funds"
               onClick={() => handleMenuClick(4)}
             >
               <p className={selectedMenu === 4 ? activeMenuClass : menuClass}>
@@ -77,6 +90,7 @@ const Menu = () => {
               </p>
             </Link>
           </li>
+
           <li>
             <Link
               style={{ textDecoration: "none" }}
@@ -89,11 +103,39 @@ const Menu = () => {
             </Link>
           </li>
         </ul>
+
         <hr />
+
         <div className="profile" onClick={handleProfileClick}>
           <div className="avatar">ZU</div>
-          <p className="username">USERID</p>
+
+          <p className="username">
+            {localStorage.getItem("userName") || "USERID"}
+          </p>
         </div>
+
+        {isProfileDropdownOpen && (
+          <div
+            style={{
+              padding: "10px",
+              marginTop: "10px",
+              border: "1px solid #ddd",
+              borderRadius: "5px",
+              background: "#fff",
+            }}
+          >
+            <button
+              onClick={handleLogout}
+              style={{
+                width: "100%",
+                padding: "8px",
+                cursor: "pointer",
+              }}
+            >
+              Logout
+            </button>
+          </div>
+        )}
       </div>
     </div>
   );
