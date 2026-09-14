@@ -22,7 +22,7 @@ const ProtectedRoute = ({ children }) => {
   const savedUser = localStorage.getItem("userName");
 
   if (!savedUser) {
-    window.location.href = "http://localhost:3000/login";
+    window.location.href = "https://frontend-zerodha1.vercel.app/login";
     return null;
   }
 
