@@ -13,10 +13,10 @@ const Menu = () => {
     setIsProfileDropdownOpen(!isProfileDropdownOpen);
   };
 
-    const handleLogout = () => {
-     localStorage.clear();
-      window.location.replace("http://localhost:3000/login");
-    };
+  const handleLogout = () => {
+    localStorage.clear();
+    window.location.replace("https://frontend-zerodha1.vercel.app/login");
+  };
 
   const menuClass = "menu";
   const activeMenuClass = "menu selected";
