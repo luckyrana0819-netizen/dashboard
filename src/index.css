@@ -843,3 +843,303 @@ hr {
 }
 
 
+/* ================================
+   MOBILE RESPONSIVE DASHBOARD
+================================ */
+
+@media (max-width: 767px) {
+
+  /* Main dashboard */
+  .dashboard-container {
+    width: 100%;
+    height: auto;
+    min-height: 90vh;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    overflow-x: hidden;
+  }
+
+  /* Watchlist */
+  .watchlist-container {
+    width: 100% !important;
+    flex-basis: auto !important;
+    height: 42vh !important;
+    min-height: 280px;
+    overflow-y: auto;
+    flex-shrink: 0;
+  }
+
+  /* Main content */
+  .content {
+    width: 100% !important;
+    flex-basis: auto !important;
+    height: auto !important;
+    min-height: 58vh;
+    padding: 20px 15px !important;
+    overflow-x: hidden;
+    overflow-y: visible;
+  }
+
+  /* Top bar */
+  .topbar-container {
+    width: 100% !important;
+    height: 60px;
+    flex-wrap: nowrap;
+    overflow: hidden;
+  }
+
+  .indices-container {
+    width: 50% !important;
+    flex-basis: 50% !important;
+    padding: 8px 5px;
+  }
+
+  .nifty,
+  .sensex {
+    flex-basis: 50%;
+    font-size: 11px;
+  }
+
+  .index,
+  .index-points,
+  .percent {
+    font-size: 10px;
+  }
+
+  /* Dashboard top menu */
+  .menu-container {
+    width: 100% !important;
+    flex-basis: 100% !important;
+    height: 60px;
+    padding: 10px;
+  }
+
+  .menus {
+    width: auto;
+  }
+
+  .menus li {
+    margin-right: 8px;
+  }
+
+  .menu {
+    font-size: 11px;
+  }
+
+  .profile {
+    margin-left: 5px;
+  }
+
+  .profile .username {
+    font-size: 10px;
+  }
+
+  .profile .avatar {
+    width: 25px;
+    height: 25px;
+    font-size: 9px;
+  }
+
+  /* Search */
+  .search-container {
+    width: 100%;
+  }
+
+  .search {
+    width: 100%;
+    padding: 12px 10px;
+    font-size: 13px;
+  }
+
+  .counts {
+    right: 10px;
+    font-size: 12px;
+  }
+
+  /* Watchlist rows */
+  .list {
+    padding-left: 0;
+    margin: 0;
+  }
+
+  .list li {
+    padding: 10px 8px;
+  }
+
+  .item {
+    width: 100%;
+    font-size: 12px;
+  }
+
+  .item-info {
+    width: 100%;
+  }
+
+  .item-info span {
+    font-size: 11px;
+  }
+
+  /* Watchlist bottom number bar */
+  .watchlist-number {
+    width: 100% !important;
+    height: auto;
+    min-height: 45px;
+    padding: 5px;
+    left: 0;
+    bottom: 0;
+  }
+
+  .watchlist-number ul {
+    padding: 0;
+    margin: 0;
+  }
+
+  .watchlist-number ul li {
+    padding: 8px 12px;
+    font-size: 11px;
+  }
+
+  /* Summary sections */
+  .section {
+    width: 100%;
+    padding-bottom: 20px;
+  }
+
+  .section span {
+    width: 100%;
+  }
+
+  .section span p {
+    font-size: 16px;
+  }
+
+  .data {
+    width: 100% !important;
+    max-width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 10px;
+  }
+
+  .data .first {
+    width: 100%;
+  }
+
+  .data .first h3 {
+    font-size: 2rem;
+  }
+
+  .data .second {
+    width: 100%;
+  }
+
+  .data .second p {
+    white-space: normal;
+    font-size: 12px;
+  }
+
+  .data hr {
+    display: none;
+  }
+
+  /* Generic rows and columns */
+  .row {
+    width: 100% !important;
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 20px;
+  }
+
+  .col {
+    width: 100% !important;
+    flex-basis: 100% !important;
+    margin-bottom: 15px;
+  }
+
+  /* Tables */
+  .order-table {
+    width: 100%;
+    overflow-x: auto;
+  }
+
+  .order-table table {
+    min-width: 600px;
+  }
+
+  /* Funds / buttons */
+  .funds {
+    width: 100%;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    gap: 8px;
+  }
+
+  .btn {
+    padding: 9px 14px;
+    font-size: 13px;
+  }
+
+  /* Orders */
+  .orders {
+    width: 100%;
+    height: auto;
+    min-height: 70vh;
+  }
+
+  /* Titles */
+  .title {
+    font-size: 1.2rem;
+  }
+
+  /* Holdings / Positions */
+  .table {
+    width: 100%;
+    overflow-x: auto;
+  }
+
+  .table .data {
+    width: 100%;
+  }
+}
+
+/* Small phones */
+@media (max-width: 480px) {
+
+  .watchlist-container {
+    height: 38vh !important;
+    min-height: 250px;
+  }
+
+  .content {
+    padding: 15px 10px !important;
+  }
+
+  .topbar-container {
+    height: 55px;
+  }
+
+  .indices-container {
+    padding: 5px 2px;
+  }
+
+  .index,
+  .index-points,
+  .percent {
+    font-size: 9px;
+  }
+
+  .watchlist-number ul li {
+    padding: 7px 8px;
+    font-size: 10px;
+  }
+
+  .data .first h3 {
+    font-size: 1.8rem;
+  }
+
+  .section span p {
+    font-size: 15px;
+  }
+}
