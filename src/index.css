@@ -1,21 +1,16 @@
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto",
-    "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans",
-    "Helvetica Neue", sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  overflow-x: hidden;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
-
-/* =========================
-   MAIN DASHBOARD
-========================= */
 
 .dashboard-container {
   width: 100%;
@@ -32,10 +27,6 @@ code {
   overflow-y: auto;
   padding: 3% 2%;
 }
-
-/* =========================
-   COMMON
-========================= */
 
 .funds {
   width: 100%;
@@ -68,6 +59,86 @@ code {
   background: #4184f3;
 }
 
+.row {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  margin-top: 5%;
+}
+
+.col {
+  flex-basis: 48%;
+  text-align: left;
+}
+
+.col span {
+  display: flex;
+  align-items: center;
+  margin-bottom: 2%;
+}
+
+.section-icon {
+  transform: scale(0.8);
+  color: rgb(66, 56, 56);
+  padding: 0;
+  margin: 0;
+  margin-right: 10px;
+}
+
+.col span p {
+  display: inline-block;
+  font-size: 1.2rem;
+  font-weight: 300;
+}
+
+.table {
+  border: 1px solid #ddd;
+  padding: 5% 8%;
+}
+
+.table .data {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.table .data > * {
+  margin-bottom: 5%;
+}
+
+.table .data p:first-child {
+  font-size: 1rem;
+  color: rgb(151, 151, 151);
+}
+
+.imp {
+  font-size: 1.5rem;
+  color: #313131;
+}
+
+.colored {
+  color: #4184f3;
+}
+
+.table hr {
+  border: none;
+  background: #d1d1d1;
+  height: 0.5px;
+  margin-bottom: 5%;
+}
+
+.commodity {
+  padding: 2% 8%;
+  text-align: center;
+}
+
+.commodity p {
+  margin-bottom: 10%;
+  color: #c9c9c9;
+}
+
+/* sudo selectors */
 .btn-blue:hover {
   background: #74a7fa;
 }
@@ -83,12 +154,64 @@ code {
   margin-bottom: 2%;
 }
 
-/* =========================
-   ROW / COLUMN
-========================= */
+.order-table table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.order-table tr {
+  border-top: 1px solid #f1f1f1;
+  border-bottom: 1px solid #f1f1f1;
+}
+
+.order-table th {
+  text-align: right;
+  padding: 15px 10px;
+  color: rgb(145, 145, 145);
+  font-weight: 300;
+  font-size: 0.8rem;
+}
+
+.order-table tr th:first-child,
+.order-table tr td:first-child {
+  text-align: left;
+}
+
+.order-table tr th:nth-child(1),
+.order-table tr th:nth-child(4) {
+  border-right: 1px solid #f1f1f1;
+}
+
+.order-table tr td:nth-child(1),
+.order-table tr td:nth-child(4) {
+  border-right: 1px solid #f1f1f1;
+}
+
+.order-table tr td:last-child {
+  font-size: 0.6rem;
+}
+
+.order-table td {
+  padding: 10px 10px;
+  text-align: right;
+  font-weight: 400;
+  font-size: 0.9rem;
+  color: rgb(73, 73, 73);
+}
+
+.align-left {
+  text-align: left;
+}
+
+.order-table td.profit {
+  color: rgb(72, 194, 55);
+}
+
+.order-table td.loss {
+  color: rgb(250, 118, 78);
+}
 
 .row {
-  width: 100%;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -97,19 +220,6 @@ code {
 
 .col {
   flex-basis: 33%;
-  text-align: left;
-}
-
-.col span {
-  display: flex;
-  align-items: center;
-  margin-bottom: 2%;
-}
-
-.col span p {
-  display: inline-block;
-  font-size: 1.2rem;
-  font-weight: 300;
 }
 
 .col h5 {
@@ -134,137 +244,100 @@ code {
   color: rgb(72, 194, 55);
 }
 
-.section-icon {
-  transform: scale(0.8);
-  color: rgb(66, 56, 56);
-  padding: 0;
-  margin: 0;
-  margin-right: 10px;
+/* sudo selector */
+.item:hover {
+  cursor: pointer;
 }
 
-/* =========================
-   TABLE
-========================= */
-
-.table {
-  border: 1px solid #ddd;
-  padding: 5% 8%;
-}
-
-.table .data {
+.menu-container {
+  flex-basis: 68%;
+  height: 100%;
+  padding: 10px 20px;
+  box-sizing: border-box;
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
 
-.table .data > * {
-  margin-bottom: 5%;
+.logo {
+  width: 30px;
+  height: 20px;
 }
 
-.table .data p:first-child {
-  font-size: 1rem;
-  color: rgb(151, 151, 151);
+.menus {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
 }
 
-.table hr {
-  border: none;
-  background: #d1d1d1;
-  height: 0.5px;
-  margin-bottom: 5%;
+.menus ul {
+  list-style-type: none;
 }
 
-.imp {
-  font-size: 1.5rem;
-  color: #313131;
+.menus li {
+  display: inline-block;
+  margin-right: 30px;
+  text-decoration: none;
 }
 
-.colored {
-  color: #4184f3;
-}
-
-.commodity {
-  padding: 2% 8%;
-  text-align: center;
-}
-
-.commodity p {
-  margin-bottom: 10%;
-  color: #c9c9c9;
-}
-
-/* =========================
-   ORDER TABLE
-========================= */
-
-.order-table {
-  width: 100%;
-}
-
-.order-table table {
-  width: 100%;
-  border-collapse: collapse;
-}
-
-.order-table tr {
-  border-top: 1px solid #f1f1f1;
-  border-bottom: 1px solid #f1f1f1;
-}
-
-.order-table th {
-  text-align: right;
-  padding: 15px 10px;
-  color: rgb(145, 145, 145);
-  font-weight: 300;
+.menu {
   font-size: 0.8rem;
-}
-
-.order-table td {
-  padding: 10px 10px;
-  text-align: right;
   font-weight: 400;
-  font-size: 0.9rem;
-  color: rgb(73, 73, 73);
+  color: rgb(70, 70, 70);
 }
 
-.order-table tr th:first-child,
-.order-table tr td:first-child {
-  text-align: left;
+.menu.selected {
+  color: rgb(245, 104, 52);
 }
 
-.order-table tr th:nth-child(1),
-.order-table tr th:nth-child(4),
-.order-table tr td:nth-child(1),
-.order-table tr td:nth-child(4) {
-  border-right: 1px solid #f1f1f1;
+hr {
+  border-left: 0.8px solid rgb(243, 242, 242);
+  height: 30px;
 }
 
-.order-table tr td:last-child {
-  font-size: 0.6rem;
+.profile {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  margin-left: 20px;
 }
 
-.order-table tr td:first-child p {
-  background: rgb(255, 197, 197);
-  color: rgb(233, 120, 120);
-  width: 50%;
+.profile .avatar {
+  width: 30px;
+  height: 30px;
   text-align: center;
-  border-radius: 2px;
+  position: relative;
+  font-size: 0.7rem;
+  font-weight: 400;
+  color: rgb(221, 139, 221);
+  justify-content: center;
+  align-items: center;
+  border-radius: 100%;
+  text-align: center;
+  display: flex;
+  background: rgb(252, 229, 252);
+  margin-right: 8px;
 }
 
-.order-table td.profit {
-  color: rgb(72, 194, 55);
+.profile .username {
+  font-size: 0.8rem;
+  font-weight: 300;
 }
 
-.order-table td.loss {
-  color: rgb(250, 118, 78);
+/* sudo selectors */
+
+.menu:hover {
+  color: rgb(245, 104, 52);
 }
 
-.align-left {
-  text-align: left;
+.profile:hover {
+  cursor: pointer;
 }
 
-/* =========================
-   ORDERS
-========================= */
+.profile:hover .username {
+  cursor: pointer;
+  color: rgb(223, 91, 43);
+}
 
 .orders {
   width: 100%;
@@ -291,18 +364,118 @@ code {
   font-weight: 300;
 }
 
-.no-orders .btn {
+.btn {
+  text-decoration: none;
   background: rgb(77, 77, 248);
+  padding: 10px 20px;
+  border-radius: 2px;
+  color: #fff;
   margin-top: 2%;
 }
 
-.no-orders .btn:hover {
+.btn:hover {
   background: rgb(110, 110, 253);
 }
 
-/* =========================
-   SUMMARY
-========================= */
+.title {
+  font-size: 1.3rem;
+  font-weight: 300;
+  color: rgb(71, 71, 71);
+  margin-bottom: 2%;
+}
+
+.order-table table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.order-table tr {
+  border-top: 1px solid rgb(211, 211, 211);
+  border-bottom: 1px solid rgb(211, 211, 211);
+}
+
+.order-table th {
+  text-align: right;
+  padding: 15px 10px;
+  color: rgb(145, 145, 145);
+  font-weight: 300;
+  font-size: 0.8rem;
+}
+
+.order-table tr th:first-child,
+.order-table tr td:first-child {
+  text-align: left;
+}
+
+.order-table tr td:first-child p {
+    background: rgb(255, 197, 197);
+    color: rgb(233, 120, 120);
+    width: 50%;
+    text-align: center;
+    border-radius: 2px;
+}
+
+.order-table tr td:last-child {
+  font-size: 0.6rem;
+}
+
+.order-table td {
+  padding: 10px 10px;
+  text-align: right;
+  font-weight: 400;
+  font-size: 0.9rem;
+  color: rgb(73, 73, 73);
+}
+
+.align-left {
+  text-align: left;
+}
+
+.order-table td.profit {
+  color: rgb(72, 194, 55);
+}
+
+.order-table td.loss {
+  color: rgb(250, 118, 78);
+}
+
+.row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 5%;
+}
+
+.col {
+  flex-basis: 33%;
+}
+
+.col h5 {
+  font-size: 1.8rem;
+  color: rgb(71, 71, 71);
+  font-weight: 300;
+}
+
+.col h5 span {
+  font-weight: 300;
+  font-size: 0.9rem;
+}
+
+.col p {
+  font-size: 0.8rem;
+  color: rgb(153, 153, 153);
+  font-weight: 300;
+  margin-top: 2%;
+}
+
+.row .col:last-child h5 {
+  color: rgb(72, 194, 55);
+}
+
+/* sudo selector */
+.item:hover {
+  cursor: pointer;
+}
 
 .username h6 {
   font-size: 1.5rem;
@@ -333,6 +506,14 @@ code {
   display: inline-block;
   font-size: 1.2rem;
   font-weight: 300;
+}
+
+.section-icon {
+  transform: scale(0.8);
+  color: rgb(112, 112, 112);
+  padding: 0;
+  margin: 0;
+  margin-right: 10px;
 }
 
 .data {
@@ -385,10 +566,6 @@ code {
   margin-top: 6%;
 }
 
-/* =========================
-   TOP BAR
-========================= */
-
 .topbar-container {
   width: 100%;
   height: 10vh;
@@ -398,10 +575,6 @@ code {
   box-sizing: border-box;
   z-index: 9;
 }
-
-/* =========================
-   INDICES
-========================= */
 
 .indices-container {
   flex-basis: 32%;
@@ -414,7 +587,14 @@ code {
   justify-content: space-around;
 }
 
-.nifty,
+.nifty {
+  flex-basis: 40%;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  z-index: -2;
+}
+
 .sensex {
   flex-basis: 40%;
   display: flex;
@@ -447,13 +627,10 @@ code {
   color: rgb(146, 146, 146);
 }
 
+/* sudo selectors */
 .index:hover {
   cursor: pointer;
 }
-
-/* =========================
-   WATCHLIST
-========================= */
 
 .watchlist-container {
   flex-basis: 32%;
@@ -482,10 +659,6 @@ code {
   border-bottom: 0.8px solid rgb(235, 234, 234);
 }
 
-.search:focus {
-  outline: none;
-}
-
 .counts {
   position: absolute;
   right: 20px;
@@ -497,8 +670,6 @@ code {
 .list {
   list-style-type: none;
   padding-bottom: 12%;
-  padding-left: 0;
-  margin: 0;
 }
 
 .list li {
@@ -631,8 +802,9 @@ code {
   color: rgb(105, 105, 105);
 }
 
-.settings:hover {
-  cursor: pointer;
+/* sudo selectors */
+.search:focus {
+  outline: none;
 }
 
 .list li:hover {
@@ -645,6 +817,7 @@ code {
   cursor: move;
 }
 
+/* TODO */
 .list li::before {
   content: "";
   background: transparent;
@@ -661,494 +834,12 @@ code {
   background: rgb(243, 243, 243);
 }
 
+.settings:hover {
+  cursor: pointer;
+}
+
 .action:hover {
   background-color: rgb(212, 212, 212);
 }
 
-/* =========================
-   MENU
-========================= */
 
-.menu-container {
-  flex-basis: 68%;
-  height: 100%;
-  padding: 10px 20px;
-  box-sizing: border-box;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-
-.logo {
-  width: 30px;
-  height: 20px;
-}
-
-.dashboard-logo {
-  display: flex;
-  align-items: center;
-  text-decoration: none;
-}
-
-.dashboard-logo img {
-  width: 50px;
-  height: auto;
-}
-
-.menus {
-  display: flex;
-  align-items: center;
-  justify-content: space-evenly;
-}
-
-.menus ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-}
-
-.menus li {
-  display: inline-block;
-  margin-right: 30px;
-  text-decoration: none;
-}
-
-.menu {
-  font-size: 0.8rem;
-  font-weight: 400;
-  color: rgb(70, 70, 70);
-  margin: 0;
-}
-
-.menu.selected {
-  color: rgb(245, 104, 52);
-}
-
-.menu:hover {
-  color: rgb(245, 104, 52);
-}
-
-hr {
-  border-left: 0.8px solid rgb(243, 242, 242);
-  height: 30px;
-}
-
-.profile {
-  display: flex;
-  align-items: center;
-  justify-content: space-evenly;
-  margin-left: 20px;
-}
-
-.profile .avatar {
-  width: 30px;
-  height: 30px;
-  text-align: center;
-  position: relative;
-  font-size: 0.7rem;
-  font-weight: 400;
-  color: rgb(221, 139, 221);
-  justify-content: center;
-  align-items: center;
-  border-radius: 100%;
-  display: flex;
-  background: rgb(252, 229, 252);
-  margin-right: 8px;
-}
-
-.profile .username {
-  font-size: 0.8rem;
-  font-weight: 300;
-}
-
-.profile:hover {
-  cursor: pointer;
-}
-
-.profile:hover .username {
-  cursor: pointer;
-  color: rgb(223, 91, 43);
-}
-
-.profile-dropdown {
-  padding: 10px;
-  margin-top: 10px;
-  border: 1px solid #ddd;
-  border-radius: 5px;
-  background: #fff;
-  width: 150px;
-  position: absolute;
-  right: 10px;
-  top: 60px;
-  z-index: 1000;
-}
-
-.profile-dropdown button {
-  width: 100%;
-  padding: 8px;
-  cursor: pointer;
-}
-
-/* =========================
-   MOBILE MENU ELEMENTS
-========================= */
-
-.mobile-right,
-.mobile-menu {
-  display: none;
-}
-
-/* =========================
-   MOBILE
-========================= */
-
-@media (max-width: 767px) {
-
-  /* TOP BAR */
-  .topbar-container {
-    height: 60px !important;
-    min-height: 60px;
-    width: 100%;
-    display: flex;
-    flex-direction: row;
-    overflow: visible;
-  }
-
-  .indices-container {
-    flex-basis: 45% !important;
-    width: 45%;
-    height: 60px;
-    padding: 5px 4px;
-  }
-
-  .nifty,
-  .sensex {
-    flex-basis: 50%;
-  }
-
-  .nifty > *,
-  .sensex > * {
-    margin-right: 2px;
-  }
-
-  .index,
-  .index-points,
-  .percent {
-    font-size: 9px;
-  }
-
-  /* MOBILE MENU */
-  .menu-container {
-    flex-basis: 55% !important;
-    width: 55%;
-    height: 60px !important;
-    padding: 8px !important;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    position: relative;
-    overflow: visible !important;
-  }
-
-  .menu-container > .dashboard-logo img {
-    width: 38px !important;
-  }
-
-  .desktop-menus {
-    display: none !important;
-  }
-
-  .menus:not(.desktop-menus) {
-    display: none !important;
-  }
-
-  .mobile-right {
-    display: flex;
-    align-items: center;
-    margin-left: auto;
-    gap: 8px;
-  }
-
-  .mobile-right .profile {
-    margin-left: 0;
-  }
-
-  .mobile-right .profile .username {
-    display: none;
-  }
-
-  .mobile-right .profile .avatar {
-    width: 24px;
-    height: 24px;
-    font-size: 9px;
-    margin-right: 0;
-  }
-
-  .mobile-menu-toggle {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 34px;
-    height: 32px;
-    border: 1px solid #ccc;
-    background: #fff;
-    border-radius: 4px;
-    font-size: 20px;
-    color: #555;
-    cursor: pointer;
-  }
-
-  .mobile-menu {
-    position: absolute;
-    display: flex;
-    flex-direction: column;
-    top: 60px;
-    right: 5px;
-    width: 170px;
-    background: #fff;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
-    padding: 5px 0;
-    z-index: 9999;
-  }
-
-  .mobile-menu a {
-    text-decoration: none;
-    color: #555;
-    padding: 12px 15px;
-    font-size: 14px;
-  }
-
-  .mobile-menu a:hover {
-    background: #f5f5f5;
-    color: #4184f3;
-  }
-
-  /* MAIN DASHBOARD */
-  .dashboard-container {
-    width: 100% !important;
-    height: auto !important;
-    min-height: calc(100vh - 60px);
-    display: flex !important;
-    flex-direction: column !important;
-    align-items: stretch !important;
-    overflow-x: hidden !important;
-  }
-
-  /* WATCHLIST */
-  .watchlist-container {
-    width: 100% !important;
-    flex-basis: auto !important;
-    height: auto !important;
-    max-height: 45vh;
-    overflow-x: hidden;
-    overflow-y: auto;
-    flex-shrink: 0;
-  }
-
-  .search {
-    width: 100% !important;
-    height: auto !important;
-    padding: 12px 10px !important;
-    font-size: 13px !important;
-  }
-
-  .counts {
-    right: 10px;
-    font-size: 11px;
-  }
-
-  .list {
-    width: 100%;
-    padding: 0;
-    margin: 0;
-  }
-
-  .list li {
-    width: 100%;
-    padding: 10px;
-  }
-
-  .item {
-    width: 100%;
-  }
-
-  .item > p {
-    margin: 0;
-    font-size: 12px;
-  }
-
-  .item-info {
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
-    gap: 4px;
-  }
-
-  .item-info > * {
-    margin-right: 0;
-  }
-
-  .item-info .percent,
-  .item-info .price {
-    font-size: 11px;
-    white-space: nowrap;
-  }
-
-  .item-info svg {
-    font-size: 16px;
-  }
-
-  .actions {
-    display: none !important;
-  }
-
-  .watchlist-number {
-    display: none;
-  }
-
-  /* CONTENT */
-  .content {
-    width: 100% !important;
-    flex-basis: auto !important;
-    height: auto !important;
-    min-height: 500px;
-    padding: 20px 12px !important;
-    overflow-x: hidden !important;
-    overflow-y: visible !important;
-  }
-
-  /* SUMMARY */
-  .section {
-    width: 100%;
-  }
-
-  .section span {
-    width: 100%;
-  }
-
-  .section span p {
-    font-size: 16px;
-  }
-
-  .data {
-    width: 100% !important;
-    display: flex;
-    align-items: flex-start;
-    justify-content: space-between;
-    gap: 15px;
-  }
-
-  .data .first h3 {
-    font-size: 2rem;
-  }
-
-  .data .second {
-    flex: 1;
-  }
-
-  .data .second p {
-    white-space: normal;
-    font-size: 12px;
-  }
-
-  .data hr {
-    height: 55px;
-  }
-
-  /* TABLES */
-  .order-table {
-    width: 100%;
-    overflow-x: auto;
-    -webkit-overflow-scrolling: touch;
-  }
-
-  .order-table table {
-    min-width: 550px;
-  }
-
-  .table {
-    width: 100%;
-    overflow-x: auto;
-  }
-
-  /* ROWS */
-  .row {
-    width: 100% !important;
-    flex-wrap: wrap;
-    margin-top: 20px;
-  }
-
-  .col {
-    width: 100%;
-    flex-basis: 100%;
-    margin-bottom: 15px;
-  }
-
-  /* BUTTONS */
-  .funds {
-    flex-wrap: wrap;
-    justify-content: flex-start;
-    gap: 8px;
-  }
-
-  .btn {
-    font-size: 13px;
-    padding: 9px 14px;
-  }
-
-  .orders {
-    width: 100%;
-    height: auto;
-    min-height: 70vh;
-  }
-}
-
-/* =========================
-   VERY SMALL PHONES
-========================= */
-
-@media (max-width: 480px) {
-
-  .indices-container {
-    flex-basis: 44% !important;
-    width: 44%;
-  }
-
-  .menu-container {
-    flex-basis: 56% !important;
-    width: 56%;
-  }
-
-  .index,
-  .index-points,
-  .percent {
-    font-size: 8px;
-  }
-
-  .content {
-    padding: 15px 10px !important;
-  }
-
-  .watchlist-container {
-    max-height: 42vh;
-  }
-
-  .item > p {
-    font-size: 11px;
-  }
-
-  .item-info .percent,
-  .item-info .price {
-    font-size: 10px;
-  }
-
-  .data .first h3 {
-    font-size: 1.8rem;
-  }
-
-  .section span p {
-    font-size: 15px;
-  }
-}
